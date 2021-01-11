@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "974204795807",
+    "project_id": "homecook-296800",
+    "storage_bucket": "homecook-296800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:974204795807:android:eb945b4d1678aea7f41baa",
+        "android_client_info": {
+          "package_name": "com.example.homecook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "974204795807-dc0f3m4gvlufeii20ist5m27p5325e0k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.homecook",
+            "certificate_hash": "9589fb9187ddbb7ee65f6f76de0582a63a892c38"
+          }
+        },
+        {
+          "client_id": "974204795807-4bjvgst0pqksm9r480874lhlvsv194nl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA73xwpb82GUVH6xPdXsjhivnt14UFcCP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "974204795807-4bjvgst0pqksm9r480874lhlvsv194nl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
