@@ -7,7 +7,7 @@ class AuthService {
   //Handles Auth
   handleAuth() {
     return StreamBuilder(
-        stream: FirebaseAuth.instance.onAuthStateChanged,
+        stream: FirebaseAuth.instance.authStateChanges(),
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
             return Myservices();
@@ -28,8 +28,8 @@ class AuthService {
   }
 
   signInWithOTP(smsCode, verId) {
-    AuthCredential authCreds = PhoneAuthProvider.getCredential(
-        verificationId: verId, smsCode: smsCode);
+    AuthCredential authCreds =
+        PhoneAuthProvider.credential(verificationId: verId, smsCode: smsCode);
     signIn(authCreds);
   }
 }

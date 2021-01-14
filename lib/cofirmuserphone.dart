@@ -112,14 +112,14 @@ class _ConfirmuserphoneState extends State<Confirmuserphone> {
         verificationCompleted: (AuthCredential authCredential) {
           _firebaseAuth
               .signInWithCredential(authCredential)
-              .then((AuthResult result) {
+              .then((UserCredential result) {
             Navigator.pushReplacement(
                 context, MaterialPageRoute(builder: (_) => Rentcooker()));
           }).catchError((e) {
             return "error";
           });
         },
-        verificationFailed: (AuthException exception) {
+        verificationFailed: (FirebaseAuthException exception) {
           Fluttertoast.showToast(
               msg: "الرجاء التأكد من صحة رقم الجوال",
               toastLength: Toast.LENGTH_LONG,
@@ -154,13 +154,13 @@ class _ConfirmuserphoneState extends State<Confirmuserphone> {
                     color: Colors.green,
                     onPressed: () {
                       if (_codeController != null) {
-                        var _credential = PhoneAuthProvider.getCredential(
+                        var _credential = PhoneAuthProvider.credential(
                             verificationId: verificationId,
                             smsCode: _codeController.text.trim());
 
                         _firebaseAuth
                             .signInWithCredential(_credential)
-                            .then((AuthResult result) {
+                            .then((UserCredential result) {
                           Navigator.pushReplacement(context,
                               MaterialPageRoute(builder: (_) => Rentcooker()));
                         }).catchError((e) {
